@@ -1,0 +1,20 @@
+﻿repos:
+  - repo: https://github.com/psf/black
+    rev: 23.9.1
+    hooks:
+      - id: black
+        language_version: python3
+
+  - repo: https://github.com/pycqa/flake8
+    rev: 6.1.0
+    hooks:
+      - id: flake8
+
+  - repo: local
+    hooks:
+      - id: pytest-on-push
+        name: Run tests (pytest) on push
+        entry: pytest -q
+        language: system
+        pass_filenames: false
+        stages: [pre-push]
