@@ -31,7 +31,7 @@ pip install -r requirements.txt
 
 ENV anlegen
 
-Kopiere die Beispiel-ENV und passe sie an:
+
 
 cp .env.example .env
 # trage z.B. PASSWORD=meinpasswort ein
@@ -63,13 +63,9 @@ In `README.md`:
 pytest -q
 
 
-Stelle sicher, dass `tests/test_app.py` **mindestens** einen Test enthält, der läuft.
 
----
 
-## 4) Azure-Versuch nachvollziehbar dokumentieren
 
-Da das Hosting nicht ging, schreibe offen in `README.md` (und ggf. `REPORT.md`), was du versucht hast:
 
 - App Service Region: *Germany West Central*  
 - App Service Plan: *Linux, F1 (Free)*  
@@ -83,26 +79,15 @@ Da das Hosting nicht ging, schreibe offen in `README.md` (und ggf. `REPORT.md`),
 - **Screenshot(s)** vom Portal: Übersicht, Log Stream, ggf. Fehlermeldung „Application Error“.
 - Link zum Deploy-Log / Workflow-Run (GitHub Actions).
 
-> Ziel: Dein Lehrer sieht, **du hast die Cloud-Deploy-Kette verstanden und aufgebaut**, auch wenn Azure am Ende nicht mitspielt.
 
----
 
-## 5) GitHub-Release & ZIP
 
-Damit die Abgabe „eingefroren“ ist:
 
-1. In GitHub: **Releases → Draft a new release**
-2. Tag: `v1.0.0` (oder `submission-2025-09-22`)
-3. **Release Notes:** kurzer Text + evtl. Link zu README.
-4. **„Generate source code (zip)“** wird automatisch angehängt → das ist deine offizielle Abgabe.
 
-> Alternativ: **Code → Download ZIP** (vom `main`-Branch) und in die Schulplattform hochladen **plus** Repo-Link mitgeben.
 
----
 
-## 6) README-Vorlage (Copy/Paste)
 
-```md
+
 # Tagebuch-App (Flask)
 
 ## Kurzbeschreibung
@@ -153,7 +138,7 @@ ModuleNotFoundError: No module named 'dotenv' (behoben durch python-dotenv)
 
 Trotz Fix reagierte Container nicht auf Port 8000 → „Application Error“
 
-Screenshots: siehe docs/screenshots/ (falls angelegt)
+
 
 startbefehel gunicorn --bind=0.0.0.0:8000 app:app
 
